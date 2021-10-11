@@ -6,6 +6,8 @@ public class PlayButtonMove : MonoBehaviour
 {
     private Rigidbody2D leftMove;
 
+    public bool move = false;
+
     private void Awake()
     {
         leftMove = GetComponent<Rigidbody2D>();
@@ -13,6 +15,14 @@ public class PlayButtonMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        leftMove.AddForce(new Vector2 (-200.0f, 0.0f) * Time.deltaTime);
+        if (Input.GetKey(KeyCode.Space))
+        {
+            move = true;
+        }
+
+        if (move == true)
+        {
+            leftMove.AddForce(new Vector2(-200.0f, 0.0f) * Time.deltaTime);
+        }
     }
 }
