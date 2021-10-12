@@ -9,20 +9,12 @@ public class SettingsButtonLerp : MonoBehaviour
 
     static float t = 0.0f;
 
-    public bool move = false;
+    //public bool move = false;
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.S))
-        {
-            move = true;
-        }
-
-        if (move == true)
-        {
-            transform.position = new Vector3(Mathf.Lerp(p1, p2, t), -4, 0);
-
-            t += 0.5f * Time.deltaTime;
-        }
+        transform.position = new Vector3(Mathf.Lerp(p1, p2, t), -4, 0);
+        
+        t += 0.5f * Time.deltaTime;
     }
 }

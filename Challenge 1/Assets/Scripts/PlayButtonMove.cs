@@ -22,7 +22,7 @@ public class PlayButtonMove : MonoBehaviour
 
         if (move == true)
         {
-            leftMove.AddForce(new Vector2(-200.0f, 0.0f) * Time.deltaTime);
+            leftMove.AddForce(new Vector2(0.0f, 200.0f) * Time.deltaTime);
         }
     }
 }

@@ -14,16 +14,8 @@ public class ControlsButtonLerp : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.C))
-        {
-            move = true;
-        }
+        transform.position = new Vector3(Mathf.Lerp(p1, p2, t), -4, 0);
 
-        if (move == true)
-        {
-            transform.position = new Vector3(Mathf.Lerp(p1, p2, t), -4, 0);
-
-            t += 0.5f * Time.deltaTime;
-        }
+        t += 0.5f * Time.deltaTime;
     }
 }
